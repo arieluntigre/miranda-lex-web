@@ -145,7 +145,7 @@
   .area-card p { font-size: 14.5px; color: var(--mut); margin-bottom: 20px; }
   .area-tag { font-size: 12.5px; font-weight: 600; color: var(--brass); text-transform: uppercase; display: block; }
 
-  /* Botón único de volver a inicio en herramientas */
+  /* Botón de volver */
   .barra-retorno { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
   .btn-volver-unico {
     background: #EEF1F2;
@@ -159,7 +159,7 @@
   }
   .btn-volver-unico:hover { background: var(--line); }
 
-  /* Paneles de herramientas y Formularios */
+  /* Paneles y formularios */
   .panel { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; margin-top: 24px; }
   .panel h2 { font-size: 28px; margin-bottom: 8px; }
   .desc { color: var(--mut); margin-bottom: 20px; font-size: 14.5px; }
@@ -236,9 +236,61 @@
   }
   @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } }
 
+
+  /* ===== Integración: servicios dentro de cada área ===== */
+  [hidden] { display: none !important; }
+  .draft-banner { background: #FFF4D6; color: #5C4306; border-bottom: 1px solid #E8D29A; font-size: 14px; font-weight: 600; text-align: center; padding: 10px 16px; }
+  .bloque-servicios { margin: 8px 0; }
+  .sec-tit { font-size: 28px; margin: 28px 0 14px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  .sec-herr { margin-top: 40px; }
+  .ver-mas { display: block; margin-top: 6px; font-weight: 600; color: var(--brass); font-size: 14px; }
+  
+  .sub-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 16px; }
+  .sub-tab { background: #EEF1F2; color: var(--ink); border: 1px solid var(--line); padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 14px; cursor: pointer; font-family: inherit; }
+  .sub-tab:hover { background: var(--line); }
+  .sub-tab.activo { background: var(--deep); color: #FFF; border-color: var(--deep); }
+  .pasos { list-style: none; padding: 0; margin: 0 0 20px; }
+  .pasos li { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 14px; }
+  .num { flex: none; width: 32px; height: 32px; border-radius: 50%; background: var(--brass); color: #FFF; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .pasos strong { display: block; }
+  .pasos span { color: var(--mut); font-size: 15px; }
+  .pain { border-left: 3px solid var(--brass); background: #FBF7EE; padding: 14px 18px; margin: 18px 0; font-style: italic; color: #3D4A55; border-radius: 0 6px 6px 0; }
+  .paquetes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 8px; }
+  .paq { background: #FBFCFC; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+  .paq h3 { font-size: 22px; margin-bottom: 6px; }
+  .paq .desc { margin-bottom: 10px; }
+  .paq ul { padding-left: 20px; margin: 0; color: #2B3A46; }
+  .paq li { margin-bottom: 6px; font-size: 15px; }
+  .seg-caso { background: var(--deep); color: #FFF; border-radius: var(--radius); padding: 18px 20px; margin: 20px 0; }
+  .cta-caso { text-align: center; background: #FBFCFC; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; margin: 28px 0 0; }
+  .cta-caso p { margin: 0 0 14px; font-weight: 600; }
+  .cta-caso .costo { font-weight: 400; font-size: 14px; color: var(--mut); margin: 12px 0 0; }
+  .legal { font-size: 13.5px; color: var(--mut); margin-top: 24px; }
+  .verificar { background: #FFE58A; color: #5C4306; font-weight: 600; font-size: 0.85em; padding: 1px 6px; border-radius: 4px; }
+  @media (max-width: 640px) { .sec-tit { font-size: 24px; } }
+  .area-card { border-left: 3px solid var(--brass); }
+  .btn-inst { background: transparent; border: 1px solid transparent; box-shadow: none; }
+  .btn-inst:hover { border-color: var(--brass); box-shadow: none; }
+  .acento-nacional { display: flex; width: 120px; height: 5px; border-radius: 3px; overflow: hidden; margin-bottom: 18px; }
+  .acento-nacional span { flex: 1; }
+  .acento-nacional span:nth-child(1) { background: #B5312B; }
+  .acento-nacional span:nth-child(2) { background: #E0B43A; }
+  .acento-nacional span:nth-child(3) { background: #2E7D4F; }
+  .qs-texto { color: #2B3A46; font-size: 17px; max-width: 74ch; margin-bottom: 16px; }
+
+
+
+  .qs-lema { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 22px; color: var(--brass); }
+  .pub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 8px; }
+  .pub-card { background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--brass); border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; gap: 8px; }
+  .pub-meta { font-size: 12.5px; color: var(--mut); text-transform: uppercase; letter-spacing: .06em; font-weight: 600; }
+  .pub-card h3 { font-size: 22px; }
+  .pub-card p { color: var(--mut); font-size: 14.5px; margin: 0; }
+  .pub-card a { margin-top: auto; font-weight: 600; color: var(--brass); text-decoration: none; font-size: 14px; }
 </style>
 </head>
 <body>
+
 
 <!-- 1. LOGO GIGANTE ARRIBA DE TODO -->
 <div class="top-banner" onclick="mostrarInicioYScroll('tope')">
@@ -253,6 +305,7 @@
       <button class="nav-btn" onclick="mostrarInicioYScroll('quienes-somos')">Quiénes Somos</button>
       <button class="nav-btn" onclick="mostrarInicioYScroll('especialidades')">Especialidades</button>
       <button class="nav-btn" onclick="mostrarInicioYScroll('servicios')">Servicios</button>
+      <button class="nav-btn" onclick="mostrarInicioYScroll('publicaciones')">Publicaciones</button>
       <button class="nav-btn" onclick="mostrarInicioYScroll('contacto')">Contacto</button>
       <a class="btn-wsp-nav" href="https://wa.me/59172992576" target="_blank">Escribir al WhatsApp</a>
     </nav>
@@ -267,53 +320,61 @@
     <div class="wrap" id="tope">
       <div class="hero">
         <h1>Gestión Legal Transparente y Eficaz.</h1>
-        <p>Seleccione un área de práctica a continuación para acceder a nuestras calculadoras procesales interactivas y herramientas jurídicas.</p>
-        <div style="display:flex; gap:12px; justify-content: center; flex-wrap:wrap;">
-          <a class="btn main" href="https://wa.me/59172992576" target="_blank">Consultar Caso Legal</a>
-          <button class="btn" onclick="mostrarInicioYScroll('especialidades')">Ver Herramientas</button>
-        </div>
+        <p>Seleccione un área de práctica a continuación para conocer nuestros servicios y cómo podemos acompañar su caso.</p>
+
       </div>
     </div>
 
     <section class="home-bloque" id="quienes-somos">
       <div class="wrap">
+        <div class="acento-nacional" aria-hidden="true"><span></span><span></span><span></span></div>
         <h2>Quiénes Somos</h2>
-        <p class="lead" style="max-width: 80ch;">Somos una firma jurídica especializada con sedes en La Paz y Tarija. Nuestro enfoque se basa en brindar un diagnóstico objetivo y honesto desde el primer contacto formal, garantizando el respeto estricto de los plazos procesales y la transparencia en cada etapa del litigio o consultoría.</p>
+        <p class="qs-texto">Miranda Lex nace de una trayectoria de generaciones dedicadas a la abogacía, y hoy es una firma jurídica boliviana con sedes en La Paz y Tarija, respaldada por años de experiencia en la defensa de sus clientes. Acompañamos a familias, trabajadores, empresas y personas que enfrentan un proceso judicial o un trámite y no saben por dónde empezar, y lo hacemos con seriedad y cercanía, con un diagnóstico claro desde el primer contacto y con transparencia en cada etapa.</p>
+        <p class="qs-texto">Bolivia es grande y los casos no siempre se quedan en nuestras ciudades. Por eso contamos con alianzas con profesionales en otros departamentos del país, para dar seguimiento a cada caso con la misma atención, sin importar dónde esté.</p>
+        <p class="qs-texto">También acompañamos a nuestros compatriotas que viven en el exterior. Desde otro país puede iniciar sus trámites con nosotros: apostillas, poderes, certificados y gestiones ante instituciones bolivianas, sin tener que viajar a Bolivia para hacer filas.</p>
+        <p class="qs-lema">Justitia et Veritas</p>
       </div>
     </section>
 
-    <!-- Tarjetas que abren las calculadoras y áreas -->
+    <!-- Tarjetas de especialidades -->
     <section class="home-bloque" id="especialidades" style="background: #FFF;">
       <div class="wrap">
-        <h2>Áreas de Especialización y Herramientas</h2>
-        <p class="lead">Haga clic en una especialidad para abrir sus calculadoras de plazos, liquidaciones y detalles de servicio.</p>
-        
-        <div class="areas-grid">
-          <div class="area-card" onclick="abrirHerramienta('vista-familia')">
-            <h3>Familia</h3> 
-            <p>Asistencia familiar, liquidaciones, plazos de la Ley 603, divorcios y herencias.</p>
-            <span class="area-tag">Abrir calculadoras →</span>
-          </div>
-          <div class="area-card" onclick="abrirHerramienta('vista-laboral')">
+        <h2>Áreas de Especialización</h2>
+        <p class="lead">Haga clic en una especialidad para conocer sus servicios y cómo podemos acompañar su caso.</p>
+        <div class="areas-grid"><div class="area-card" onclick="abrirHerramienta('vista-familia')">
+            <h3>Familia</h3>
+            <p>Asistencia familiar, divorcios, cuidado de los hijos y niñez y adolescencia.</p>
+            <span class="area-tag">Ver servicios →</span>
+          </div><div class="area-card" onclick="abrirHerramienta('vista-laboral')">
             <h3>Laboral y Corporativo</h3>
             <p>Despidos, beneficios sociales, finiquitos y asesoría empresarial.</p>
-            <span class="area-tag">Abrir calculadoras →</span>
-          </div>
-          <div class="area-card" onclick="abrirHerramienta('vista-penal')">
+            <span class="area-tag">Ver servicios →</span>
+          </div><div class="area-card" onclick="abrirHerramienta('vista-penal')">
             <h3>Derecho Penal y Ejecución</h3>
-            <p>Defensas, querellas, audiencias de medidas cautelares y plazos.</p>
-            <span class="area-tag">Abrir calculadoras →</span>
-          </div>
-          <div class="area-card" onclick="abrirHerramienta('vista-civil')">
+            <p>Defensas, querellas, audiencias y plazos penales.</p>
+            <span class="area-tag">Ver servicios →</span>
+          </div><div class="area-card" onclick="abrirHerramienta('vista-civil')">
             <h3>Civil y Contratos</h3>
-            <p>Procesos ordinarios, contratos, cobros y derechos reales.</p>
-            <span class="area-tag">Abrir calculadoras →</span>
+            <p>Procesos ordinarios, contratos, cobros, derechos reales y sucesiones.</p>
+            <span class="area-tag">Ver servicios →</span>
+          </div><div class="area-card" onclick="abrirHerramienta('vista-bancario')">
+            <h3>Derecho Bancario</h3>
+            <p>Seguros de desgravamen y de cesantía, y reclamos ante entidades financieras.</p>
+            <span class="area-tag">Ver servicios →</span>
+          </div><div class="area-card" onclick="abrirHerramienta('vista-agroambiental')">
+            <h3>Derecho Agroambiental</h3>
+            <p>Conflictos sobre tierras, licencias, procesos agrarios y trámites ante el INRA.</p>
+            <span class="area-tag">Ver servicios →</span>
           </div>
-          <!-- NUEVA TARJETA: TRÁMITES EN GENERAL -->
-          <div class="area-card" onclick="abrirHerramienta('vista-tramites')" style="border-left: 3px solid var(--brass);">
+          <div class="area-card" onclick="abrirHerramienta('vista-administrativo')">
+            <h3>Derecho Administrativo</h3>
+            <p>Recursos, reclamos y procesos sancionatorios según la Ley 2341.</p>
+            <span class="area-tag">Ver servicios →</span>
+          </div>
+          <div class="area-card" onclick="abrirHerramienta('vista-tramites')">
             <h3>Trámites en General</h3>
-            <p>Apostillas, legalizaciones, SERECI, Derechos Reales y notariado.</p>
-            <span class="area-tag">Ver servicios cotidianos →</span>
+            <p>Apostilla, municipio, tránsito, derechos reales, comercio y certificados.</p>
+            <span class="area-tag">Ver trámites →</span>
           </div>
         </div>
       </div>
@@ -337,55 +398,33 @@
       </div>
     </section>
 
+    <section class="home-bloque" id="publicaciones">
+      <div class="wrap">
+        <h2>Publicaciones y Noticias</h2>
+        <p class="lead">Novedades jurídicas, cambios normativos y artículos de nuestro equipo, revisados antes de su publicación.</p>
+        <div class="pub-grid" id="pub-grid"></div>
+        <p class="legal">Las publicaciones son de carácter informativo y no reemplazan la asesoría legal para un caso concreto.</p>
+      </div>
+    </section>
+
   </div>
   <!-- FIN VISTA INICIO -->
 
-  <!-- ================= VISTAS DE HERRAMIENTAS Y ESPECIALIDADES ================= -->
+  <!-- ================= VISTAS DE ESPECIALIDADES ================= -->
   <div class="wrap">
     
     <!-- FAMILIA -->
     <section id="vista-familia" class="seccion-vista">
       <div class="barra-retorno"><button class="btn-volver-unico" onclick="mostrarInicioYScroll('especialidades')">← Volver al Menú de Especialidades</button></div>
-      <h1>Familia (Ley N° 603)</h1>
-      <p class="desc">Herramientas procesales y liquidaciones del Código de las Familias.</p>
-      <div class="panel">
-        <h2>1. Medidor de Plazos Procesales (Ley 603)</h2>
-        <div class="fila">
-          <div>
-            <label>Seleccione el trámite:</label>
-            <select id="fam_opcion">
-              <option value="10_habil">Plazo para responder demanda (10 días hábiles)</option>
-              <option value="5_habil">Respuesta demanda extraordinaria (5 días hábiles)</option>
-              <option value="3_habil">Disponibilidad de sentencia (3 días hábiles)</option>
-              <option value="10_habil">Apelación ordinaria (10 días hábiles)</option>
-              <option value="3_corrido">Apremio por asistencia (3 días corridos)</option>
-            </select>
-          </div>
-          <div><label>Fecha de notificación:</label><input type="date" id="fam_fecha"></div>
-        </div>
-        <div class="resultado bloqueado" oncopy="mostrarAviso(event)" oncontextmenu="mostrarAviso(event)">
-          <small style="color:var(--mut);">FECHA LÍMITE DE VENCIMIENTO</small>
-          <div class="monto-grande" id="fam_vence">-- / -- / ----</div>
-          <p id="fam_detalle" style="font-size:13.5px; color:var(--mut);">Elija la fecha de notificación.</p>
-        </div>
-        <div class="grilla-dias bloqueado" id="fam_grilla" oncopy="mostrarAviso(event)" oncontextmenu="mostrarAviso(event)"></div>
-      </div>
-      <div class="panel">
-        <h2>2. Liquidación de Asistencia Familiar</h2>
-        <div class="nota-ley">⚖️ <strong>Mínimo Legal:</strong> El monto fijado no puede ser menor al 20% del Salario Mínimo Nacional (Art. 116 Ley 603).</div>
-        <div class="fila">
-          <div><label>Adeuda desde:</label><input type="date" id="asist_desde"></div>
-          <div><label>Hasta (corte):</label><input type="date" id="asist_hasta"></div>
-        </div>
-        <div class="fila">
-          <div><label>Pensión mensual (Bs.):</label><input type="number" id="asist_monto" min="0"></div>
-          <div><label>Pagos a cuenta (Bs.):</label><input type="number" id="asist_pagos" value="0" min="0"></div>
-        </div>
-        <div class="resultado bloqueado" oncopy="mostrarAviso(event)" oncontextmenu="mostrarAviso(event)">
-          <small style="color:var(--mut);">TOTAL LÍQUIDO ADEUDADO</small>
-          <div class="monto-grande" id="asist_total">Bs. 0.00</div>
-          <p id="asist_detalle" style="font-size:13.5px; color:var(--mut);">Complete los datos.</p>
-        </div>
+      <h1>Familia</h1>
+      <p class="desc">Acompañamos a familias en asistencia familiar, divorcios y cuidado de los hijos, con la Ley N° 603 como marco. También acompañamos la protección de niñas, niños y adolescentes conforme a la Ley N° 548.</p>
+      <div class="bloque-servicios">
+<div class="sub-tabs"><button type="button" class="sub-tab activo" onclick="mostrarSub(this,'familia-603')">Ley 603 · Familia</button><button type="button" class="sub-tab" onclick="mostrarSub(this,'familia-548')">Ley 548 · Niñez y adolescencia</button></div>
+<div class="sub-panel" data-sub="familia-603"><p class="desc">Asistencia familiar, divorcios y cuidado de los hijos, con la Ley N° 603 como marco.</p><ul class="lista-tramites"><li><strong>Asistencia familiar:</strong> demanda de fijación de pensión, reclamo por incumplimiento y liquidación de la deuda.</li><li><strong>Divorcios y separaciones:</strong> demanda, medidas provisionales y división de bienes.</li><li><strong>Cuidado personal y visitas:</strong> definición del cuidado de los hijos y del régimen de visitas.</li></ul></div>
+<div class="sub-panel" data-sub="familia-548" hidden><p class="desc">Protección de los derechos de niñas, niños y adolescentes, con la Ley N° 548 como marco. Principales procesos: </p><ul class="lista-tramites"><li><strong>Guarda:</strong> designación de guarda de niñas, niños y adolescentes y su revocación.</li><li><strong>Tutela:</strong> ordinaria y extraordinaria.</li><li><strong>Adopción:</strong> nacional e internacional.</li><li><strong>Filiación judicial:</strong> establecer ante el juez la paternidad o maternidad.</li><li><strong>Autoridad de padre o madre:</strong> suspensión o extinción.</li><li><strong>Familia sustituta y acogimiento:</strong> ubicación temporal de niñas, niños y adolescentes.</li></ul></div>
+<h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Nos cuentas tu caso</strong><span>Escribes por WhatsApp o nos explicas lo que necesitas.</span></div></li><li><div class="num">2</div><div><strong>Revisamos documentos y requisitos</strong><span>Te indicamos qué falta, qué debe corregirse y cuánto puede tardar cada paso.</span></div></li><li><div class="num">3</div><div><strong>Gestionamos y te informamos</strong><span>Presentamos el trámite y te avisamos de cada novedad hasta la entrega.</span></div></li></ol>
+<div class="cta-caso"><p>¿Tienes un caso de familia o necesitas liquidar una pensión?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20tengo%20un%20caso%20de%20familia%20y%20quisiera%20una%20consulta" target="_blank" rel="noopener">Consultar por WhatsApp</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div>
+        <p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p>
       </div>
     </section>
 
@@ -393,99 +432,146 @@
     <section id="vista-laboral" class="seccion-vista">
       <div class="barra-retorno"><button class="btn-volver-unico" onclick="mostrarInicioYScroll('especialidades')">← Volver al Menú de Especialidades</button></div>
       <h1>Laboral y Corporativo</h1>
-      <p class="desc">Plazos bajo la Ley General del Trabajo y D.S. 28699.</p>
-      <div class="panel">
-        <h2>Medidor de Plazos Laborales</h2>
-        <div class="fila">
-          <div>
-            <label>Trámite o intimación:</label>
-            <select id="lab_opcion">
-              <option value="15_corrido">Pago Beneficios tras despido/renuncia (15 días calendario)</option>
-              <option value="3_habil">Conminatoria Reincorporación (3 días hábiles)</option>
-            </select>
-          </div>
-          <div><label>Fecha del evento:</label><input type="date" id="lab_fecha"></div>
-        </div>
-        <div class="resultado">
-          <small style="color:var(--mut);">VENCIMIENTO</small>
-          <div class="monto-grande" id="lab_vence">-- / -- / ----</div>
-        </div>
-      </div>
+      <p class="desc">Asesoramos a trabajadores y empresas en despidos, beneficios sociales y finiquitos, y en la prevención de conflictos laborales.</p>
+      <div class="bloque-servicios"><h2 class="sec-tit">Servicios principales</h2><ul class="lista-tramites"><li><strong>Despidos y reincorporación:</strong> revisión del caso, intimaciones y reclamos.</li><li><strong>Beneficios sociales y finiquitos:</strong> cálculo y reclamo de lo que corresponde al trabajador.</li><li><strong>Asesoría empresarial:</strong> contratos de trabajo, reglamentos internos y revisión de procedimientos de despido. </li></ul><h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Nos cuentas tu caso</strong><span>Escribes por WhatsApp o nos explicas lo que necesitas.</span></div></li><li><div class="num">2</div><div><strong>Revisamos documentos y requisitos</strong><span>Te indicamos qué falta, qué debe corregirse y cuánto puede tardar cada paso.</span></div></li><li><div class="num">3</div><div><strong>Gestionamos y te informamos</strong><span>Presentamos el trámite y te avisamos de cada novedad hasta la entrega.</span></div></li></ol><div class="cta-caso"><p>¿Tienes un despido, un finiquito o un conflicto laboral?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20tengo%20una%20consulta%20laboral" target="_blank" rel="noopener">Consultar por WhatsApp</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div><p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p></div>
     </section>
 
     <!-- PENAL -->
     <section id="vista-penal" class="seccion-vista">
       <div class="barra-retorno"><button class="btn-volver-unico" onclick="mostrarInicioYScroll('especialidades')">← Volver al Menú de Especialidades</button></div>
       <h1>Derecho Penal y Ejecución</h1>
-      <p class="desc">Términos perentorios Ley N° 1970 (C.P.P.).</p>
-      <div class="panel">
-        <h2>Medidor de Plazos Penales</h2>
-        <div class="fila">
-          <div>
-            <label>Actuación penal:</label>
-            <select id="pen_opcion">
-              <option value="3_habil">Apelación Incidental Medidas Cautelares (3 días)</option>
-              <option value="20_corrido">Etapa de Investigaciones Preliminares (20 días)</option>
-              <option value="15_habil">Apelación Restringida Sentencia (15 días)</option>
-            </select>
-          </div>
-          <div><label>Fecha de notificación:</label><input type="date" id="pen_fecha"></div>
-        </div>
-        <div class="resultado">
-          <small style="color:var(--mut);">PLAZO FATAL</small>
-          <div class="monto-grande" id="pen_vence">-- / -- / ----</div>
-        </div>
-      </div>
+      <p class="desc">Defendemos a personas y acompañamos a víctimas en procesos penales, desde la investigación hasta las audiencias y la ejecución de la condena.</p>
+      <div class="bloque-servicios"><h2 class="sec-tit">Servicios principales</h2><ul class="lista-tramites"><li><strong>Defensa penal:</strong> intervención en investigaciones, audiencias y juicios.</li><li><strong>Querellas:</strong> presentación y seguimiento de denuncias y acusaciones.</li><li>Audiencias de medidas cautelares y recursos de apelación.</li><li><strong>Ejecución penal:</strong> seguimiento de la condena y de los beneficios que corresponden. </li></ul><div class="seg-caso">Si hay una persona aprehendida, escríbenos de inmediato o revisa Urgencias en Trámites en General.</div><h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Nos cuentas tu caso</strong><span>Escribes por WhatsApp o nos explicas lo que necesitas.</span></div></li><li><div class="num">2</div><div><strong>Revisamos documentos y requisitos</strong><span>Te indicamos qué falta, qué debe corregirse y cuánto puede tardar cada paso.</span></div></li><li><div class="num">3</div><div><strong>Gestionamos y te informamos</strong><span>Presentamos el trámite y te avisamos de cada novedad hasta la entrega.</span></div></li></ol><div class="cta-caso"><p>¿Tienes una audiencia, una querella o una medida cautelar?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20necesito%20asesoramiento%20en%20un%20caso%20penal" target="_blank" rel="noopener">Consultar por WhatsApp</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div><p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p></div>
     </section>
 
     <!-- CIVIL -->
     <section id="vista-civil" class="seccion-vista">
       <div class="barra-retorno"><button class="btn-volver-unico" onclick="mostrarInicioYScroll('especialidades')">← Volver al Menú de Especialidades</button></div>
       <h1>Civil y Contratos</h1>
-      <p class="desc">Plazos Procesales Ley N° 439 (C.P.C.).</p>
-      <div class="panel">
-        <h2>Medidor de Plazos Civiles</h2>
-        <div class="fila">
-          <div>
-            <label>Tipo de citación:</label>
-            <select id="civ_opcion">
-              <option value="30_habil">Contestación Demanda Ordinaria (30 días)</option>
-              <option value="10_habil">Contestación Demanda Extraordinaria (10 días)</option>
-              <option value="10_habil">Apelación contra Sentencia (10 días)</option>
-            </select>
-          </div>
-          <div><label>Fecha de citación:</label><input type="date" id="civ_fecha"></div>
-        </div>
-        <div class="resultado">
-          <small style="color:var(--mut);">VENCIMIENTO TÉRMINO</small>
-          <div class="monto-grande" id="civ_vence">-- / -- / ----</div>
-        </div>
+      <p class="desc">Llevamos procesos civiles, revisamos y redactamos contratos, gestionamos cobros, controversias sobre inmuebles y trámites de sucesión.</p>
+      <div class="bloque-servicios">
+<h2 class="sec-tit">Servicios principales</h2><ul class="lista-tramites"><li><strong>Procesos civiles ordinarios:</strong> demandas, contestaciones y recursos.</li><li><strong>Contratos:</strong> redacción, revisión y seguimiento de su cumplimiento.</li><li><strong>Cobros:</strong> reclamación de deudas y procesos de cobro.</li><li><strong>Derechos reales:</strong> controversias sobre inmuebles y su posesión. </li><li><strong>Sucesiones:</strong> declaratorias de herederos y trámites de herencia. </li></ul>
+<h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Nos cuentas tu caso</strong><span>Escribes por WhatsApp o nos explicas lo que necesitas.</span></div></li><li><div class="num">2</div><div><strong>Revisamos documentos y requisitos</strong><span>Te indicamos qué falta, qué debe corregirse y cuánto puede tardar cada paso.</span></div></li><li><div class="num">3</div><div><strong>Gestionamos y te informamos</strong><span>Presentamos el trámite y te avisamos de cada novedad hasta la entrega.</span></div></li></ol>
+<div class="cta-caso"><p>¿Tienes una demanda, un contrato o una deuda por cobrar?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20necesito%20asesoramiento%20en%20un%20caso%20civil" target="_blank" rel="noopener">Consultar por WhatsApp</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div>
+        <p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p>
       </div>
     </section>
 
-    <!-- NUEVA VISTA: TRÁMITES EN GENERAL -->
+    <section id="vista-bancario" class="seccion-vista">
+      <div class="barra-retorno"><button class="btn-volver-unico" onclick="mostrarInicioYScroll('especialidades')">← Volver al Menú de Especialidades</button></div>
+      <h1>Derecho Bancario</h1>
+      <p class="desc">Asesoramos a clientes frente a entidades financieras, en especial en los seguros asociados a un crédito.</p>
+      <div class="bloque-servicios"><div class="sub-tabs"><button type="button" class="sub-tab activo" onclick="mostrarSub(this,'desgravamen')">Seguro de desgravamen</button><button type="button" class="sub-tab" onclick="mostrarSub(this,'cesantia')">Seguro de cesantía</button></div><div class="sub-panel" data-sub="desgravamen"><p class="desc">Te ayudamos cuando el seguro de desgravamen de un crédito se rechaza, se cobra mal o no cubre un caso de fallecimiento o invalidez.</p><ul class="lista-tramites"><li>Revisión de la póliza, de sus condiciones y de los cobros realizados.</li><li>Reclamo ante la entidad financiera o la aseguradora por negativas de cobertura o cobros indebidos.</li><li>Gestión de la cobertura en caso de fallecimiento o invalidez del deudor. </li></ul></div><div class="sub-panel" data-sub="cesantia" hidden><p class="desc">Te ayudamos cuando el seguro de cesantía no cubre una pérdida de empleo, o cuando la entidad demora o niega el pago.</p><ul class="lista-tramites"><li>Revisión de la póliza y de las condiciones de cobertura por pérdida de empleo.</li><li>Reclamo ante la entidad financiera o la aseguradora por negativas o demoras.</li><li>Seguimiento del reclamo hasta su resolución. </li></ul></div><h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Nos cuentas tu caso</strong><span>Escribes por WhatsApp o nos explicas lo que necesitas.</span></div></li><li><div class="num">2</div><div><strong>Revisamos documentos y requisitos</strong><span>Te indicamos qué falta, qué debe corregirse y cuánto puede tardar cada paso.</span></div></li><li><div class="num">3</div><div><strong>Gestionamos y te informamos</strong><span>Presentamos el trámite y te avisamos de cada novedad hasta la entrega.</span></div></li></ol><div class="cta-caso"><p>¿Tienes un seguro rechazado, cobros que no entiendes o un reclamo bancario?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20necesito%20asesoramiento%20en%20un%20tema%20de%20derecho%20bancario%20o%20de%20seguros" target="_blank" rel="noopener">Consultar por WhatsApp</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div><p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p></div>
+    </section>
+    <section id="vista-agroambiental" class="seccion-vista">
+      <div class="barra-retorno"><button class="btn-volver-unico" onclick="mostrarInicioYScroll('especialidades')">← Volver al Menú de Especialidades</button></div>
+      <h1>Derecho Agroambiental</h1>
+      <p class="desc">Asesoramos en procesos sobre tierras rurales, uso de recursos naturales y licencias ambientales, ante los tribunales y las instituciones competentes.</p>
+      <div class="bloque-servicios"><div class="sub-tabs"><button type="button" class="sub-tab activo" onclick="mostrarSub(this,'procesos')">Procesos agroambientales</button><button type="button" class="sub-tab" onclick="mostrarSub(this,'inra')">Trámites ante el INRA</button></div><div class="sub-panel" data-sub="procesos"><p class="desc">Llevamos los conflictos sobre tierras rurales, uso de recursos naturales y licencias ambientales ante el Tribunal Agroambiental.</p><ul class="lista-tramites"><li><strong>Procesos ante el Tribunal Agroambiental:</strong> demandas, contestaciones y recursos.</li><li>Conflictos sobre el uso, la posesión y la propiedad de tierras rurales.</li><li><strong>Licencias y fichas ambientales:</strong> asesoramiento para su tramitación.</li><li>Cumplimiento ambiental de proyectos y actividades productivas. </li></ul></div><div class="sub-panel" data-sub="inra" hidden><p class="desc">Gestionamos ante el Instituto Nacional de Reforma Agraria los trámites sobre tierras rurales: saneamiento, titulación y certificaciones.</p><ul class="lista-tramites"><li>Saneamiento y titulación de propiedades agrarias. </li><li>Certificaciones y revisión de antecedentes de la tierra.</li><li>Transferencias, subdivisiones y actualización de datos del predio.</li><li>Seguimiento de expedientes ante el INRA hasta su resolución.</li></ul></div><h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Nos cuentas tu caso</strong><span>Escribes por WhatsApp o nos explicas lo que necesitas.</span></div></li><li><div class="num">2</div><div><strong>Revisamos documentos y requisitos</strong><span>Te indicamos qué falta, qué debe corregirse y cuánto puede tardar cada paso.</span></div></li><li><div class="num">3</div><div><strong>Gestionamos y te informamos</strong><span>Presentamos el trámite y te avisamos de cada novedad hasta la entrega.</span></div></li></ol><div class="cta-caso"><p>¿Tienes un conflicto sobre tierras, una licencia ambiental o un trámite ante el INRA?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20necesito%20asesoramiento%20en%20derecho%20agroambiental%20o%20un%20tr%C3%A1mite%20ante%20el%20INRA" target="_blank" rel="noopener">Consultar por WhatsApp</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div><p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p></div>
+    </section>
+    <section id="vista-administrativo" class="seccion-vista">
+      <div class="barra-retorno"><button class="btn-volver-unico" onclick="mostrarInicioYScroll('especialidades')">← Volver al Menú de Especialidades</button></div>
+      <h1>Derecho Administrativo</h1>
+      <p class="desc">Asesoramos a personas y empresas frente a la administración pública: recursos, reclamos y procesos sancionatorios, conforme a la Ley N° 2341 de Procedimiento Administrativo.</p>
+      <div class="bloque-servicios">
+<div class="nota-ley"><strong>Marco legal:</strong> Ley N° 2341 de Procedimiento Administrativo. </div>
+<h2 class="sec-tit">Servicios principales</h2><ul class="lista-tramites"><li><strong>Recurso de revocatoria:</strong> impugnación ante la misma autoridad que dictó el acto.</li><li><strong>Recurso jerárquico:</strong> impugnación ante la máxima autoridad de la entidad, luego de la revocatoria.</li><li><strong>Silencio administrativo:</strong> si la entidad no responde, puede reclamarse y recurrirse.</li><li><strong>Procedimientos sancionadores:</strong> defensa desde la notificación de cargos, con presentación de descargos y pruebas.</li><li><strong>Vía contencioso-administrativa:</strong> acceso judicial una vez agotada la vía administrativa.</li></ul>
+<div class="seg-caso">Ante una notificación de la administración, consúltanos cuanto antes para revisar tus opciones.</div>
+<h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Nos cuentas tu caso</strong><span>Escribes por WhatsApp o nos explicas lo que necesitas.</span></div></li><li><div class="num">2</div><div><strong>Revisamos documentos y requisitos</strong><span>Te indicamos qué falta, qué debe corregirse y cuánto puede tardar cada paso.</span></div></li><li><div class="num">3</div><div><strong>Gestionamos y te informamos</strong><span>Presentamos el trámite y te avisamos de cada novedad hasta la entrega.</span></div></li></ol>
+<div class="cta-caso"><p>¿Recibiste una resolución o una notificación de una entidad pública?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20recib%C3%AD%20una%20resoluci%C3%B3n%20administrativa%20y%20necesito%20asesoramiento" target="_blank" rel="noopener">Consultar por WhatsApp</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div>
+        <p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p>
+      </div>
+    </section>
+    <!-- VISTA: TRÁMITES EN GENERAL (guía integrada) -->
     <section id="vista-tramites" class="seccion-vista">
       <div class="barra-retorno"><button class="btn-volver-unico" onclick="mostrarInicioYScroll('especialidades')">← Volver al Menú de Especialidades</button></div>
-      <h1>Trámites Legales y Administrativos</h1>
-      <p class="desc">Soluciones ágiles para la gestión de su documentación cotidiana en el Estado Plurinacional de Bolivia.</p>
-      
-      <div class="panel">
-        <h2>Gestión Documental Confiable</h2>
-        <p style="color:var(--mut); font-size:15px; margin-bottom: 24px;">Sabemos que la burocracia puede consumir su tiempo valioso. En Miranda Lex nos encargamos de agilizar sus procesos administrativos, garantizando el cumplimiento de todos los requisitos legales vigentes. Confíe la gestión de sus documentos a expertos con amplia experiencia en la administración pública.</p>
-        
-        <ul class="lista-tramites">
-          <li><strong>Apostilla y Legalizaciones:</strong> Tramitación ágil ante el Ministerio de Relaciones Exteriores para que sus documentos bolivianos tengan plena validez en el extranjero, o viceversa.</li>
-          <li><strong>Derechos Reales:</strong> Obtención de Folio Real actualizado, registro de compra-venta, declaratoria de herederos, levantamiento de hipotecas y gravámenes.</li>
+      <div id="tram-lista">
+        <h1>Trámites en General</h1>
+        <p class="desc">Gestionamos trámites ante las instituciones del Estado: revisamos los requisitos, preparamos la documentación y hacemos el seguimiento hasta la entrega.</p>
+        <div class="areas-grid"><div class="area-card" onclick="abrirTramite('apostilla')"><span class="area-tag">Exterior</span><h3>Apostilla y poderes desde el extranjero</h3><p>Trámites sin viajar a Bolivia, desde cualquier país.</p><span class="ver-mas">Ver trámite →</span></div><div class="area-card" onclick="abrirTramite('municipal')"><span class="area-tag">Gobierno municipal</span><h3>Trámites ante el Gobierno Municipal</h3><p>Catastro, licencias, patentes y construcciones.</p><span class="ver-mas">Ver trámite →</span></div><div class="area-card" onclick="abrirTramite('transito')"><span class="area-tag">Tránsito</span><h3>Trámites de tránsito y el RUAT</h3><p>Transferencias, minutas y parque automotor.</p><span class="ver-mas">Ver trámite →</span></div><div class="area-card" onclick="abrirTramite('ddrr')"><span class="area-tag">Derechos reales</span><h3>Trámites en Derechos Reales</h3><p>Folios reales, alodiales e hipotecas.</p><span class="ver-mas">Ver trámite →</span></div><div class="area-card urgente" onclick="abrirTramite('urgencias')"><span class="area-tag">Urgencia</span><h3>Tránsito, FELCC, garantías y urgencias</h3><p>Vehículos retenidos y celdas policiales.</p><span class="ver-mas">Ver trámite →</span></div><div class="area-card" onclick="abrirTramite('seprec')"><span class="area-tag">Comercio</span><h3>Trámites ante el SEPREC</h3><p>Matrículas de comercio y poderes societarios.</p><span class="ver-mas">Ver trámite →</span></div><div class="area-card" onclick="abrirTramite('gobernacion')"><span class="area-tag">Gobernación</span><h3>Trámites ante las Gobernaciones</h3><p>Licencias ambientales y personalidades jurídicas.</p><span class="ver-mas">Ver trámite →</span></div><div class="area-card" onclick="abrirTramite('antecedentes')"><span class="area-tag">Certificados</span><h3>Antecedentes, certificados y solvencia</h3><p>REJAP, CENVI y Contraloría General.</p><span class="ver-mas">Ver trámite →</span></div></div>
+        <p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p>
+        <div class="panel"><h2>Otros trámites</h2><ul class="lista-tramites">
           <li><strong>Trámites en SERECI y SEGIP:</strong> Saneamiento y corrección de partidas de nacimiento, matrimonio o defunción. Solución a problemas de identidad.</li>
           <li><strong>Notaría de Fe Pública:</strong> Redacción de poderes especiales y generales, cartas notariadas, reconocimientos de firmas y declaraciones voluntarias.</li>
-          <li><strong>Gestión Municipal:</strong> Trámites de catastro, aprobación de planos, pago y regularización de impuestos de bienes inmuebles y vehículos.</li>
         </ul>
-
         <div style="margin-top: 30px; text-align: center; padding-top: 20px; border-top: 1px solid var(--line);">
           <p style="margin-bottom: 15px; font-weight: 600;">¿Necesita ayuda con un trámite específico?</p>
           <a class="btn main" href="https://wa.me/59172992576?text=Hola,%20necesito%20asesor%C3%ADa%20con%20un%20tr%C3%A1mite%20administrativo." target="_blank">Coordinar Trámite por WhatsApp</a>
-        </div>
+        </div></div>
       </div>
+      <div class="tram-det" id="tram-apostilla" hidden>
+      <div class="barra-retorno"><button class="btn-volver-unico" onclick="volverTramites()">← Volver a trámites</button></div>
+      <span class="area-tag">Exterior</span>
+      <h1>Apostilla y poderes desde el extranjero</h1>
+      <p class="desc">Gestionamos tus apostillas y poderes digitales sin que tengas que viajar. Te acompañamos desde la revisión del documento hasta su entrega.</p>
+      <blockquote class="pain">Sabemos lo frustrante que es lidiar con la burocracia desde la distancia: llamadas que nadie atiende, familiares ocupados que no pueden hacer las filas y el temor a que rechacen un documento por un error de forma. Nosotros nos encargamos del trámite.</blockquote>
+      <h2 class="sec-tit">Paquetes</h2><div class="paquetes"><div class="paq"><h3>Apostilla digital</h3><p class="desc">Para homologar títulos, validar antecedentes o legalizar documentos civiles.</p><ul><li>Revisión técnica del documento original en PDF</li><li>Gestión de validación ante la entidad emisora en Bolivia</li><li>Pago de tasas estatales </li><li>Envío de la apostilla electrónica </li><li>Tiempo estimado: 3 a 5 días hábiles</li></ul></div><div class="paq"><h3>Redacción y validación de poderes</h3><p class="desc">Para compraventa de inmuebles, divorcios, declaratorias de herederos o trámites bancarios.</p><ul><li>Redacción del poder con cláusulas de especialidad</li><li>Instrucciones de firma para tu consulado más cercano</li><li>Validación del código consular en el sistema de Bolivia</li><li>Activación del poder para usarlo en Bolivia</li></ul></div></div>
+      <h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Envías tus documentos</strong><span>Escaneas o fotografías tus documentos con el celular y nos los envías por WhatsApp.</span></div></li><li><div class="num">2</div><div><strong>Procesamos y pagamos</strong><span>Revisamos el trámite, cargamos los datos en el sistema correspondiente y cubrimos las tasas locales.</span></div></li><li><div class="num">3</div><div><strong>Recibes y verificas</strong><span>Te enviamos el documento listo para usarlo ante la autoridad que lo requiera.</span></div></li></ol>
+      <div class="seg-caso">Te informamos del avance de tu trámite en cada etapa. </div><div class="cta-caso"><p>¿Estás fuera del país y necesitas iniciar tu gestión?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20estoy%20fuera%20de%20Bolivia%20y%20necesito%20informaci%C3%B3n%20sobre%20Apostillas%20y%20Poderes%20Digitales" target="_blank" rel="noopener">Consultar por WhatsApp</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div><p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p>
+    </div><div class="tram-det" id="tram-municipal" hidden>
+      <div class="barra-retorno"><button class="btn-volver-unico" onclick="volverTramites()">← Volver a trámites</button></div>
+      <span class="area-tag">Gobierno municipal</span>
+      <h1>Trámites ante el Gobierno Municipal</h1>
+      <p class="desc">Gestionamos ante las direcciones de recaudaciones, catastro y urbanismo los procedimientos técnicos y legales para regularizar tus bienes inmuebles y actividades comerciales.</p>
+      
+      <h2 class="sec-tit">Trámites principales</h2><ul class="lista-tramites"><li><strong>Regularización de catastro y fraccionamientos:</strong> actualización técnica de datos de inmuebles, planos de lote, uniones o desmembraciones.</li><li><strong>Licencias de funcionamiento:</strong> obtención, renovación o modificación de patentes y autorizaciones para actividades económicas.</li><li><strong>Regularización de construcciones:</strong> asesoramiento bajo las leyes municipales vigentes de regularización o amnistía.</li><li><strong>Prescripción de deudas tributarias:</strong> trámites ante la alcaldía para la prescripción de impuestos de inmuebles o vehículos.</li></ul>
+      <h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Nos cuentas tu caso</strong><span>Escribes por WhatsApp o nos explicas lo que necesitas.</span></div></li><li><div class="num">2</div><div><strong>Revisamos documentos y requisitos</strong><span>Te indicamos qué falta, qué debe corregirse y cuánto puede tardar cada paso.</span></div></li><li><div class="num">3</div><div><strong>Gestionamos y te informamos</strong><span>Presentamos el trámite y te avisamos de cada novedad hasta la entrega.</span></div></li></ol>
+      <div class="cta-caso"><p>¿Tienes problemas con tu catastro, patentes o deudas municipales?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20necesito%20asesoramiento%20para%20un%20tr%C3%A1mite%20en%20el%20Gobierno%20Municipal" target="_blank" rel="noopener">Consultar por WhatsApp</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div><p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p>
+    </div><div class="tram-det" id="tram-transito" hidden>
+      <div class="barra-retorno"><button class="btn-volver-unico" onclick="volverTramites()">← Volver a trámites</button></div>
+      <span class="area-tag">Tránsito</span>
+      <h1>Trámites de tránsito y el RUAT</h1>
+      <p class="desc">Asesoramos en la seguridad jurídica de tu vehículo: transferencias, regularización tributaria y trámites ante los organismos operativos.</p>
+      
+      <h2 class="sec-tit">Trámites principales</h2><ul class="lista-tramites"><li><strong>Traspasos y minutas de transferencia:</strong> redacción de minutas de compraventa, pago del Impuesto a las Transferencias (IT) y registro en el RUAT.</li><li><strong>Duplicados y certificados de propiedad:</strong> historiales, certificados y duplicados de placas por pérdida o robo.</li><li><strong>Cancelación de prendas e hipotecas vehiculares:</strong> levantamiento de restricciones en el RUAT una vez pagada la obligación.</li><li><strong>Regularización de deudas:</strong> manejo de alertas y depuración de registros tributarios del vehículo.</li></ul>
+      <h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Nos cuentas tu caso</strong><span>Escribes por WhatsApp o nos explicas lo que necesitas.</span></div></li><li><div class="num">2</div><div><strong>Revisamos documentos y requisitos</strong><span>Te indicamos qué falta, qué debe corregirse y cuánto puede tardar cada paso.</span></div></li><li><div class="num">3</div><div><strong>Gestionamos y te informamos</strong><span>Presentamos el trámite y te avisamos de cada novedad hasta la entrega.</span></div></li></ol>
+      <div class="cta-caso"><p>¿Necesitas hacer una transferencia o regularizar tu vehículo?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20necesito%20ayuda%20con%20un%20tr%C3%A1mite%20de%20Tr%C3%A1nsito%20y%20RUAT" target="_blank" rel="noopener">Consultar por WhatsApp</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div><p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p>
+    </div><div class="tram-det" id="tram-ddrr" hidden>
+      <div class="barra-retorno"><button class="btn-volver-unico" onclick="volverTramites()">← Volver a trámites</button></div>
+      <span class="area-tag">Derechos reales</span>
+      <h1>Trámites en Derechos Reales</h1>
+      <p class="desc">Protegemos tu patrimonio inmobiliario con certificaciones oficiales, inscripciones y saneamiento de titularidad.</p>
+      
+      <h2 class="sec-tit">Trámites principales</h2><ul class="lista-tramites"><li><strong>Certificaciones reales:</strong> certificados alodiales, treintañales o decenales e información rápida de inmuebles.</li><li><strong>Inscripción de gravámenes y cancelaciones:</strong> registro o levantamiento de hipotecas, anticresis, embargos y medidas precautorias.</li><li><strong>Correcciones técnicas:</strong> adecuación de datos de identidad, superficies o linderos en partidas matriculadas.</li><li><strong>Inscripción de testamentos y declaratorias de herederos:</strong> registro de la titularidad por sucesión.</li></ul>
+      <h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Nos cuentas tu caso</strong><span>Escribes por WhatsApp o nos explicas lo que necesitas.</span></div></li><li><div class="num">2</div><div><strong>Revisamos documentos y requisitos</strong><span>Te indicamos qué falta, qué debe corregirse y cuánto puede tardar cada paso.</span></div></li><li><div class="num">3</div><div><strong>Gestionamos y te informamos</strong><span>Presentamos el trámite y te avisamos de cada novedad hasta la entrega.</span></div></li></ol>
+      <div class="cta-caso"><p>¿Requieres un certificado o sanear el folio real de tu propiedad?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20necesito%20asistencia%20con%20un%20tr%C3%A1mite%20en%20Derechos%20Reales" target="_blank" rel="noopener">Consultar por WhatsApp</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div><p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p>
+    </div><div class="tram-det" id="tram-urgencias" hidden>
+      <div class="barra-retorno"><button class="btn-volver-unico" onclick="volverTramites()">← Volver a trámites</button></div>
+      <span class="area-tag">Urgencia</span>
+      <h1>Tránsito, FELCC, garantías y urgencias</h1>
+      <p class="desc">¿Vehículo retenido por accidente, problemas en la DIPROVE o un familiar en celdas policiales? La intervención legal inmediata es clave para proteger sus derechos y lograr su libertad o la devolución de sus bienes.</p>
+      
+      <h2 class="sec-tit">Trámites principales</h2><ul class="lista-tramites"><li><strong>Devolución de vehículos retenidos:</strong> desenganche y entrega de vehículos en depósitos policiales.</li><li><strong>Asistencia en celdas de la FELCC:</strong> control de legalidad y cumplimiento de los plazos de aprehensión.</li><li><strong>Garantías y fianzas:</strong> ofrecimiento y trámite de garantías ante el Ministerio Público y jueces cautelares.</li><li><strong>Acciones de libertad (habeas corpus):</strong> recursos frente a arrestos o detenciones irregulares.</li></ul>
+      <h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Nos cuentas tu caso</strong><span>Escribes por WhatsApp o nos explicas lo que necesitas.</span></div></li><li><div class="num">2</div><div><strong>Revisamos documentos y requisitos</strong><span>Te indicamos qué falta, qué debe corregirse y cuánto puede tardar cada paso.</span></div></li><li><div class="num">3</div><div><strong>Gestionamos y te informamos</strong><span>Presentamos el trámite y te avisamos de cada novedad hasta la entrega.</span></div></li></ol>
+      <div class="cta-caso"><p>¿Necesitas asistencia de emergencia o gestionar una garantía ahora?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20necesito%20asistencia%20urgente%20por%20un%20caso%20en%20la%20FELCC%20o%20Tr%C3%A1nsito" target="_blank" rel="noopener">Contactar abogado de urgencias</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div><p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p>
+    </div><div class="tram-det" id="tram-seprec" hidden>
+      <div class="barra-retorno"><button class="btn-volver-unico" onclick="volverTramites()">← Volver a trámites</button></div>
+      <span class="area-tag">Comercio</span>
+      <h1>Trámites ante el SEPREC</h1>
+      <p class="desc">Asesoramiento corporativo para empresas unipersonales y sociedades comerciales, para mantener su legalidad operativa en Bolivia.</p>
+      
+      <h2 class="sec-tit">Trámites principales</h2><ul class="lista-tramites"><li><strong>Actualización anual de matrícula de comercio:</strong> renovación para mantener la legalidad de sociedades y empresas. </li><li><strong>Modificaciones estatutarias:</strong> aumentos o reducciones de capital, cambios de razón social, domicilio y transferencia de cuotas.</li><li><strong>Inscripción de poderes y representación legal:</strong> nombramientos de directorios, gerentes y apoderados.</li><li><strong>Constitución de sociedades (SRL y S.A.):</strong> creación y formalización de nuevas empresas.</li></ul>
+      <h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Nos cuentas tu caso</strong><span>Escribes por WhatsApp o nos explicas lo que necesitas.</span></div></li><li><div class="num">2</div><div><strong>Revisamos documentos y requisitos</strong><span>Te indicamos qué falta, qué debe corregirse y cuánto puede tardar cada paso.</span></div></li><li><div class="num">3</div><div><strong>Gestionamos y te informamos</strong><span>Presentamos el trámite y te avisamos de cada novedad hasta la entrega.</span></div></li></ol>
+      <div class="cta-caso"><p>¿Necesitas actualizar tu matrícula o modificar los estatutos de tu empresa?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20necesito%20asistencia%20para%20un%20tr%C3%A1mite%20en%20el%20SEPREC" target="_blank" rel="noopener">Consultar por WhatsApp</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div><p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p>
+    </div><div class="tram-det" id="tram-gobernacion" hidden>
+      <div class="barra-retorno"><button class="btn-volver-unico" onclick="volverTramites()">← Volver a trámites</button></div>
+      <span class="area-tag">Gobernación</span>
+      <h1>Trámites ante las Gobernaciones</h1>
+      <p class="desc">Gestiones administrativas ante las gobernaciones departamentales: licencias sectoriales y regularización de entidades sin fines de lucro.</p>
+      
+      <h2 class="sec-tit">Trámites principales</h2><ul class="lista-tramites"><li><strong>Personalidad jurídica:</strong> constitución, aprobación de estatutos y reglamentos para fundaciones, ONG y asociaciones civiles.</li><li><strong>Licencias ambientales:</strong> fichas ambientales, manifiestos y categorizaciones ante la secretaría departamental de medio ambiente.</li><li><strong>Concesiones y rutas de transporte:</strong> autorizaciones y registros para transporte departamental e interprovincial. </li></ul>
+      <h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Nos cuentas tu caso</strong><span>Escribes por WhatsApp o nos explicas lo que necesitas.</span></div></li><li><div class="num">2</div><div><strong>Revisamos documentos y requisitos</strong><span>Te indicamos qué falta, qué debe corregirse y cuánto puede tardar cada paso.</span></div></li><li><div class="num">3</div><div><strong>Gestionamos y te informamos</strong><span>Presentamos el trámite y te avisamos de cada novedad hasta la entrega.</span></div></li></ol>
+      <div class="cta-caso"><p>¿Requieres tramitar una personalidad jurídica o una licencia ambiental?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20necesito%20ayuda%20con%20un%20tr%C3%A1mite%20en%20la%20Gobernaci%C3%B3n" target="_blank" rel="noopener">Consultar por WhatsApp</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div><p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p>
+    </div><div class="tram-det" id="tram-antecedentes" hidden>
+      <div class="barra-retorno"><button class="btn-volver-unico" onclick="volverTramites()">← Volver a trámites</button></div>
+      <span class="area-tag">Certificados</span>
+      <h1>Antecedentes, certificados y solvencia</h1>
+      <p class="desc">Obtención de certificaciones oficiales que suelen pedirse en procesos judiciales, laborales, familiares y contrataciones públicas.</p>
+      
+      <h2 class="sec-tit">Trámites principales</h2><ul class="lista-tramites"><li><strong>REJAP (Registro Judicial de Antecedentes Penales):</strong> obtención y actualización del certificado. </li><li><strong>CENVI (Certificado de No Violencia):</strong> requisito frecuente en procesos familiares. </li><li><strong>Certificado de solvencia fiscal (Contraloría General del Estado):</strong> requisito para cargos públicos, consultorías y licitaciones.</li><li>Tramitamos el borrador de las anotaciones en los diferentes certificados.</li></ul>
+      <h2 class="sec-tit">Cómo funciona</h2><ol class="pasos"><li><div class="num">1</div><div><strong>Nos cuentas tu caso</strong><span>Escribes por WhatsApp o nos explicas lo que necesitas.</span></div></li><li><div class="num">2</div><div><strong>Revisamos documentos y requisitos</strong><span>Te indicamos qué falta, qué debe corregirse y cuánto puede tardar cada paso.</span></div></li><li><div class="num">3</div><div><strong>Gestionamos y te informamos</strong><span>Presentamos el trámite y te avisamos de cada novedad hasta la entrega.</span></div></li></ol>
+      <div class="cta-caso"><p>¿Necesitas tramitar urgentemente alguno de estos certificados?</p><a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20necesito%20gestionar%20un%20certificado%20de%20antecedentes%20o%20solvencia" target="_blank" rel="noopener">Consultar por WhatsApp</a><p class="costo">Toda consulta tiene un costo y se cancela.</p></div><p class="legal">Requisitos, plazos y costos dependen de cada institución y pueden cambiar. Confirmamos la información vigente antes de iniciar cualquier gestión. Esta página es informativa: no constituye asesoría legal ni garantiza resultados.</p>
+    </div>
     </section>
 
   </div>
@@ -505,10 +591,10 @@
         
         <div class="enlaces-institucionales">
           <a href="https://tcpbolivia.bo/" target="_blank" class="btn-inst" rel="noopener" title="Tribunal Constitucional Plurinacional">
-            <img src="tribunal constitucional plurinacional.jpg" alt="TCP">
+            <img src="tribunal constitucional plurinacional.png" alt="TCP">
           </a>
           <a href="https://tsj.bo/" target="_blank" class="btn-inst" rel="noopener" title="Tribunal Supremo de Justicia">
-            <img src="tribunal supremo de justicia.jpg" alt="TSJ">
+            <img src="tribunal supremo de justicia.png" alt="TSJ">
           </a>
           <a href="https://www.fiscalia.gob.bo/" target="_blank" class="btn-inst" rel="noopener" title="Fiscalía General del Estado">
             <img src="fiscalia.png" alt="Fiscalía">
@@ -517,10 +603,10 @@
             <img src="consejo de la magistratura.png" alt="Consejo de la Magistratura">
           </a>
           <a href="http://www.gacetaoficialdebolivia.gob.bo/" target="_blank" class="btn-inst" rel="noopener" title="Gaceta Oficial de Bolivia">
-            <img src="gaceta oficial de Boliva.jpg" alt="Gaceta Oficial">
+            <img src="gaceta oficial de Boliva.png" alt="Gaceta Oficial">
           </a>
           <a href="https://tribunalagroambiental.bo/" target="_blank" class="btn-inst" rel="noopener" title="Tribunal Agroambiental">
-            <img src="tribunal agroambiental.jpg" alt="Tribunal Agroambiental">
+            <img src="tribunal agroambiental.png" alt="Tribunal Agroambiental">
           </a>
           <a href="https://www.procuraduria.gob.bo/" target="_blank" class="btn-inst" rel="noopener" title="Procuraduría General del Estado">
             <img src="procuraduria.png" alt="Procuraduría">
@@ -544,7 +630,8 @@
 
         <p style="color:#A1B3BF; margin-bottom:8px;"><strong>WhatsApp:</strong> +591 72992576</p>
         <p style="color:#A1B3BF; margin-bottom:24px;"><strong>Correo:</strong> jarielmirandas@mirandalex.profesional.bo</p>
-        <p style="color:#A1B3BF; margin-bottom:8px;"><strong>Horarios de atención:</strong><br> Lunes a Viernes de 08:30 a 18:30.</p>
+        <p style="color:#A1B3BF; margin-bottom:8px;"><p style="color:#A1B3BF; margin-bottom:8px;"><strong>Horarios de atención:</strong><br> Lunes a Viernes de 08:30 a 18:30.</p>
+        <a class="btn main" href="https://wa.me/59172992576?text=Hola%20Miranda%20Lex%2C%20quisiera%20consultar%20mi%20caso" target="_blank" rel="noopener" style="margin-top: 8px;">Consultar caso legal</a>
       </div>
     </div>
 
@@ -553,16 +640,6 @@
     </div>
   </div>
 </footer>
-
-<!-- MODAL ANTICOPIA -->
-<div class="modal" id="modalAviso">
-  <div class="modal-contenido">
-    <h3>Consulta Jurídica Requerida</h3>
-    <p>Para convalidar este cálculo formalmente o revisar su expediente, coordine una consulta con nuestros abogados.</p>
-    <a href="https://wa.me/59172992576" target="_blank" class="btn-wsp">Consultar por WhatsApp</a>
-    <button class="btn-cerrar" onclick="cerrarAviso()">Cerrar</button>
-  </div>
-</div>
 
 <script>
   // ================= NAVEGACIÓN Y MENÚ =================
@@ -598,141 +675,48 @@
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
 
-  // ================= VENTANA ANTICOPIA =================
-  function mostrarAviso(e) { if(e) e.preventDefault(); document.getElementById('modalAviso').style.display = 'flex'; }
-  function cerrarAviso() { document.getElementById('modalAviso').style.display = 'none'; }
-
-  // ================= CALCULADOR UNIVERSAL DE PLAZOS =================
-  function calcularPlazoGenerico(idOpcion, idFecha, idSalida) {
-    const valOpcion = document.getElementById(idOpcion).value;
-    const valFecha = document.getElementById(idFecha).value;
-    const salida = document.getElementById(idSalida);
-
-    if(!valFecha) { salida.textContent = '-- / -- / ----'; return; }
-
-    const [cant, tipo] = valOpcion.split('_');
-    const meta = parseInt(cant, 10);
-    const [y, m, d] = valFecha.split('-').map(Number);
-    let fecha = new Date(y, m - 1, d);
-    let cont = 0;
-
-    while (cont < meta) {
-      fecha.setDate(fecha.getDate() + 1);
-      if (tipo === 'habil') {
-        const ds = fecha.getDay();
-        if (ds !== 0 && ds !== 6) cont++; 
-      } else {
-        cont++; 
-      }
-    }
-
-    if (tipo === 'corrido') {
-      while(fecha.getDay() === 0 || fecha.getDay() === 6) {
-        fecha.setDate(fecha.getDate() + 1);
-      }
-    }
-    salida.textContent = fecha.toLocaleDateString('es-BO');
+  
+  // ================= ÁREAS: SUBPESTAÑAS =================
+  function mostrarSub(boton, idSub) {
+    const bloque = boton.closest('.bloque-servicios');
+    bloque.querySelectorAll('.sub-tab').forEach(b => b.classList.toggle('activo', b === boton));
+    bloque.querySelectorAll('.sub-panel').forEach(p => { p.hidden = p.dataset.sub !== idSub; });
   }
 
-  ['lab', 'pen', 'civ'].forEach(prefijo => {
-    const sel = document.getElementById(prefijo + '_opcion');
-    const inp = document.getElementById(prefijo + '_fecha');
-    const out = document.getElementById(prefijo + '_vence');
-    const calc = () => calcularPlazoGenerico(sel.id, inp.id, out.id);
-    sel.addEventListener('change', calc);
-    inp.addEventListener('input', calc);
-  });
-
-  // ================= PLAZOS FAMILIA =================
-  const nombresDias = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
-  function calcularPlazosFam() {
-    const opcion = document.getElementById('fam_opcion').value;
-    const fechaTexto = document.getElementById('fam_fecha').value;
-    const venceEl = document.getElementById('fam_vence');
-    const detalleEl = document.getElementById('fam_detalle');
-    const grillaEl = document.getElementById('fam_grilla');
-
-    grillaEl.innerHTML = '';
-    if (!fechaTexto) {
-      venceEl.textContent = '-- / -- / ----';
-      detalleEl.textContent = 'Elija la fecha de notificación.';
-      return;
-    }
-
-    const [cant, tipo] = opcion.split('_');
-    const meta = parseInt(cant, 10);
-    const esHabil = (tipo === 'habil');
-    const [y, m, d] = fechaTexto.split('-').map(Number);
-    let fecha = new Date(y, m - 1, d);
-    let cont = 0;
-
-    while (cont < meta) {
-      fecha.setDate(fecha.getDate() + 1);
-      const diaSem = fecha.getDay();
-      const esFin = (diaSem === 0 || diaSem === 6);
-      const caja = document.createElement('div');
-      caja.className = 'dia-box';
-      const fechaNum = fecha.getDate() + '/' + (fecha.getMonth() + 1);
-
-      if (esHabil) {
-        if (esFin) {
-          caja.classList.add('dia-inhabil');
-          caja.innerHTML = nombresDias[diaSem] + ' ' + fechaNum + '<br><small>Inhábil (Rojo)</small>';
-        } else {
-          cont++;
-          caja.classList.add('dia-habil');
-          caja.innerHTML = nombresDias[diaSem] + ' ' + fechaNum + '<br><small>Día ' + cont + ' (Verde)</small>';
-        }
-      } else {
-        cont++;
-        caja.classList.add('dia-habil');
-        caja.innerHTML = nombresDias[diaSem] + ' ' + fechaNum + '<br><small>Día ' + cont + '</small>';
-      }
-      grillaEl.appendChild(caja);
-    }
-    venceEl.textContent = fecha.toLocaleDateString('es-BO');
-    detalleEl.textContent = 'Vence el ' + fecha.toLocaleDateString('es-BO', {weekday:'long', year:'numeric', month:'long', day:'numeric'}) + '.';
+  // ================= TRÁMITES: LISTA Y DETALLE =================
+  function irA(idElemento) {
+    const yOffset = -document.querySelector('header').offsetHeight - 10;
+    const y = document.getElementById(idElemento).getBoundingClientRect().top + window.scrollY + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
   }
-  document.getElementById('fam_opcion').addEventListener('change', calcularPlazosFam);
-  document.getElementById('fam_fecha').addEventListener('input', calcularPlazosFam);
-
-  // ================= ASISTENCIA FAMILIAR =================
-  function calcularPension() {
-    const d1 = document.getElementById('asist_desde').value;
-    const d2 = document.getElementById('asist_hasta').value;
-    const pm = parseFloat(document.getElementById('asist_monto').value);
-    const pg = parseFloat(document.getElementById('asist_pagos').value) || 0;
-    const totalEl = document.getElementById('asist_total');
-    const detalleEl = document.getElementById('asist_detalle');
-
-    if (!d1 || !d2 || isNaN(pm) || pm <= 0) {
-      totalEl.textContent = 'Bs. 0.00';
-      detalleEl.textContent = 'Complete las fechas y el monto.';
-      return;
-    }
-
-    const [y1, m1, day1] = d1.split('-').map(Number);
-    const [y2, m2, day2] = d2.split('-').map(Number);
-    const inicio = new Date(y1, m1 - 1, day1);
-    const fin = new Date(y2, m2 - 1, day2);
-
-    if (fin < inicio) {
-      totalEl.textContent = 'Bs. 0.00';
-      detalleEl.textContent = 'Fecha inválida.';
-      return;
-    }
-
-    let meses = (fin.getFullYear() - inicio.getFullYear()) * 12 + (fin.getMonth() - inicio.getMonth());
-    let dias = fin.getDate() - inicio.getDate();
-    if (dias < 0) { meses--; dias += new Date(fin.getFullYear(), fin.getMonth(), 0).getDate(); }
-
-    const total = (meses + (Math.min(dias, 30) / 30)) * pm;
-    const saldo = Math.max(0, total - pg);
-
-    totalEl.textContent = 'Bs. ' + saldo.toFixed(2);
-    detalleEl.textContent = meses + ' meses y ' + dias + ' días. Generado: Bs. ' + total.toFixed(2);
+  function abrirTramite(id) {
+    document.getElementById('tram-lista').hidden = true;
+    document.querySelectorAll('.tram-det').forEach(d => { d.hidden = d.id !== 'tram-' + id; });
+    irA('vista-tramites');
   }
-  ['asist_desde', 'asist_hasta', 'asist_monto', 'asist_pagos'].forEach(id => document.getElementById(id).addEventListener('input', calcularPension));
+  function volverTramites() {
+    document.querySelectorAll('.tram-det').forEach(d => { d.hidden = true; });
+    document.getElementById('tram-lista').hidden = false;
+    irA('vista-tramites');
+  }
+
+  // ================= PUBLICACIONES Y NOTICIAS =================
+  // Para actualizar: editar esta lista (lo más nuevo primero). Solo se agrega lo que el titular aprueba.
+  const PUBLICACIONES = [];
+  const escHtml = s => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const marcarTexto = s => escHtml(s).replace(/\[VERIFICAR:?\s*([^\]]*)\]/g, (m, t) => '');
+  const fechaLarga = f => { const [y, m, d] = f.split('-').map(Number); return new Date(y, m - 1, d).toLocaleDateString('es-BO', { day: 'numeric', month: 'long', year: 'numeric' }); };
+  function renderPublicaciones() {
+    if (!PUBLICACIONES.length) { document.getElementById('pub-grid').innerHTML = '<p class="legal">Pronto publicaremos aquí novedades jurídicas revisadas por nuestro equipo.</p>'; return; }
+    document.getElementById('pub-grid').innerHTML = PUBLICACIONES.map(p => `
+      <article class="pub-card">
+        <span class="pub-meta">${escHtml(p.categoria)} · ${fechaLarga(p.fecha)}</span>
+        <h3>${marcarTexto(p.titulo)}</h3>
+        <p>${marcarTexto(p.resumen)}</p>
+        ${p.enlace ? `<a href="${escHtml(p.enlace)}" target="_blank" rel="noopener">Leer más →</a>` : ''}
+      </article>`).join('');
+  }
+  renderPublicaciones();
 </script>
 
 </body>
